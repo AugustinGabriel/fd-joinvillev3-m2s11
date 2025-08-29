@@ -3,11 +3,18 @@ package br.futurodev.jmt.m2s10.entidades;
 import br.futurodev.jmt.m2s10.enums.Perfil;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.security.config.core.GrantedAuthorityDefaults;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
 @Table(name = "usuarios")
-public class UsuarioEntity {
+public class UsuarioEntity implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +32,20 @@ public class UsuarioEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
     private Perfil perfil;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of((GrantedAuthority) () -> perfil.name());
+    }
+
+    @Override
+    public String getPassword() {
+        return senha;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
 
 }

@@ -1,5 +1,6 @@
 package br.futurodev.jmt.m2s10.configs;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -50,6 +51,7 @@ public class SegurancaConfig {
     }
 
     @Bean
+    @ConditionalOnMissingBean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
         String password = encoder.encode("123");
 

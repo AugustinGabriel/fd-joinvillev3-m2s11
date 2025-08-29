@@ -2,10 +2,11 @@ package br.futurodev.jmt.m2s10.services;
 
 import br.futurodev.jmt.m2s10.dtos.UsuarioRequisicaoDto;
 import br.futurodev.jmt.m2s10.dtos.UsuarioRespostaDto;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
-public interface UsuarioService {
+public interface UsuarioService extends UserDetailsService {
 
     List<UsuarioRespostaDto> buscarTodos();
 
