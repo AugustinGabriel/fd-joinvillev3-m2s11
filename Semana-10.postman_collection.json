@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "4fc2fbe8-8445-4e1a-a93b-a2b4f19ffee2",
+		"name": "Semana 10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38383834",
+		"_collection_link": "https://minesoft-gabriel.postman.co/workspace/FuturoDev~6126e3f4-453a-45ec-972b-7406c330a49a/collection/38383834-4fc2fbe8-8445-4e1a-a93b-a2b4f19ffee2?action=share&source=collection_link&creator=38383834"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gabriel@email.com\",\n    \"senha\": \"123mudar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inicio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/inicio",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inicio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inicio/protected",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/inicio/protected",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inicio",
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inicio/protected/admin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/inicio/protected/admin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inicio",
+						"protected",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inicio/protected/user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/inicio/protected/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inicio",
+						"protected",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtQGVtYWlsLmNvbToxMjNtdWRhcg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios/:id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Gabriel\",\n    \"email\": \"gabriel@email.com\",\n    \"senha\": \"123mudar\",\n    \"perfil\": \"ADMIN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios/:id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Fernando\",\n    \"email\": \"fernando@email.com\",\n    \"senha\": \"ABCD\",\n    \"perfil\": \"USUARIO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios/:id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123mudar",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "adm@email.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Fernando\",\n    \"email\": \"fernando@email.com\",\n    \"senha\": \"ABCD\",\n    \"perfil\": \"USUARIO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/4",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
