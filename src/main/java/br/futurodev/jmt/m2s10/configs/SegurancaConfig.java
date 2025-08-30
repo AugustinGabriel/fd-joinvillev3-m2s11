@@ -1,5 +1,6 @@
 package br.futurodev.jmt.m2s10.configs;
 
+import br.futurodev.jmt.m2s10.enums.Perfil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,17 +30,23 @@ public class SegurancaConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Exemplos com endpoints
                         .requestMatchers("/login", "/inicio").permitAll()
-                        .requestMatchers("/inicio/protected/user").hasAnyRole("USUARIO", "ADMIN")
-                        .requestMatchers("/inicio/**").hasRole("ADMIN")
+                        .requestMatchers("/inicio/protected/user").hasAnyAuthority(
+                                Perfil.USUARIO.name(),
+                                Perfil.ADMIN.name()
+                        )
+                        .requestMatchers("/inicio/**").hasAuthority(Perfil.ADMIN.name())
 
                         // Exemplos com métodos e endpoints
-                        .requestMatchers(HttpMethod.GET, "/usuarios").hasAnyRole("ADMIN", "USUARIO")
-                        .requestMatchers(HttpMethod.POST, "/usuarios").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/usuarios").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/usuarios").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/usuarios/**").hasAnyAuthority(
+                                Perfil.USUARIO.name(),
+                                Perfil.ADMIN.name()
+                        )
+                        .requestMatchers(HttpMethod.POST, "/usuarios").hasAuthority(Perfil.ADMIN.name())
+                        .requestMatchers(HttpMethod.PUT, "/usuarios/**").hasAuthority(Perfil.ADMIN.name())
+                        .requestMatchers(HttpMethod.DELETE, "/usuarios/**").hasAuthority(Perfil.ADMIN.name())
 
                         // Qualquer outra requisição precisa estar autenticado
-                        .anyRequest().authenticated()
+                        .anyRequest().denyAll()
                 );
 
         return http.build();
@@ -57,12 +64,12 @@ public class SegurancaConfig {
 
         UserDetails usuario = User.withUsername("user")
                 .password(password)
-                .roles("USUARIO")
+                .roles(Perfil.USUARIO.name())
                 .build();
 
         UserDetails admin = User.withUsername("adm")
                 .password(password)
-                .roles("ADMIN")
+                .roles(Perfil.ADMIN.name())
                 .build();
 
         return new InMemoryUserDetailsManager(usuario, admin);
