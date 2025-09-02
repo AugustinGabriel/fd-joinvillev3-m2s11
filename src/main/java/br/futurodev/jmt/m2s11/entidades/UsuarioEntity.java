@@ -1,13 +1,11 @@
-package br.futurodev.jmt.m2s10.entidades;
+package br.futurodev.jmt.m2s11.entidades;
 
-import br.futurodev.jmt.m2s10.enums.Perfil;
+import br.futurodev.jmt.m2s11.enums.Perfil;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 

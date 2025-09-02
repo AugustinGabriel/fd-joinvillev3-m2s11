@@ -1,13 +1,13 @@
-package br.futurodev.jmt.m2s10;
+package br.futurodev.jmt.m2s11;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class M2S10Application {
+public class M2S11Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(M2S10Application.class, args);
+		SpringApplication.run(M2S11Application.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package br.futurodev.jmt.m2s10.dtos;
+package br.futurodev.jmt.m2s11.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

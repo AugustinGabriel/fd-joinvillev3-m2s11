@@ -1,8 +1,8 @@
-package br.futurodev.jmt.m2s10.controladores;
+package br.futurodev.jmt.m2s11.controladores;
 
-import br.futurodev.jmt.m2s10.dtos.UsuarioRequisicaoDto;
-import br.futurodev.jmt.m2s10.dtos.UsuarioRespostaDto;
-import br.futurodev.jmt.m2s10.services.UsuarioService;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRequisicaoDto;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRespostaDto;
+import br.futurodev.jmt.m2s11.services.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

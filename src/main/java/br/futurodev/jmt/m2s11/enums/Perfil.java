@@ -1,4 +1,4 @@
-package br.futurodev.jmt.m2s10.enums;
+package br.futurodev.jmt.m2s11.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

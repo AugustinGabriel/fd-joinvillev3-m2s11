@@ -1,6 +1,6 @@
-package br.futurodev.jmt.m2s10.dtos;
+package br.futurodev.jmt.m2s11.dtos;
 
-import br.futurodev.jmt.m2s10.enums.Perfil;
+import br.futurodev.jmt.m2s11.enums.Perfil;
 import lombok.Builder;
 import lombok.Data;
 

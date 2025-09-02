@@ -1,7 +1,7 @@
-package br.futurodev.jmt.m2s10.services;
+package br.futurodev.jmt.m2s11.services;
 
-import br.futurodev.jmt.m2s10.dtos.UsuarioRequisicaoDto;
-import br.futurodev.jmt.m2s10.dtos.UsuarioRespostaDto;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRequisicaoDto;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRespostaDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;

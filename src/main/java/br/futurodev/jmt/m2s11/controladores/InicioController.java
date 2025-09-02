@@ -1,6 +1,5 @@
-package br.futurodev.jmt.m2s10.controladores;
+package br.futurodev.jmt.m2s11.controladores;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

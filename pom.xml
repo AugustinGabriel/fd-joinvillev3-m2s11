@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.futurodev.jmt</groupId>
-	<artifactId>m2s10</artifactId>
+	<artifactId>m2s11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>M2S10</name>
-	<description>Projeto de Spring Security</description>
+	<name>M2S11</name>
+	<description>Projeto de Spring Security + JWT</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -59,6 +59,27 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId> <!-- Usada para programar -->
+            <version>0.11.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId> <!-- Usada na execução -->
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- Usada Jackson para serializar claims -->
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

@@ -1,4 +1,4 @@
-package br.futurodev.jmt.m2s10;
+package br.futurodev.jmt.m2s11;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

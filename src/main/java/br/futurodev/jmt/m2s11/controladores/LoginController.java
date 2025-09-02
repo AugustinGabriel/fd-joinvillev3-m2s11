@@ -1,8 +1,8 @@
-package br.futurodev.jmt.m2s10.controladores;
+package br.futurodev.jmt.m2s11.controladores;
 
-import br.futurodev.jmt.m2s10.dtos.LoginRequisicaoDto;
-import br.futurodev.jmt.m2s10.dtos.LoginRespostaDto;
-import br.futurodev.jmt.m2s10.services.LoginService;
+import br.futurodev.jmt.m2s11.dtos.LoginRequisicaoDto;
+import br.futurodev.jmt.m2s11.dtos.LoginRespostaDto;
+import br.futurodev.jmt.m2s11.services.LoginService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

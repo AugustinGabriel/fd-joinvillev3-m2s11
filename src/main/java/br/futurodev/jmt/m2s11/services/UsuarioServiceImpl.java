@@ -1,10 +1,10 @@
-package br.futurodev.jmt.m2s10.services;
+package br.futurodev.jmt.m2s11.services;
 
-import br.futurodev.jmt.m2s10.dtos.UsuarioRequisicaoDto;
-import br.futurodev.jmt.m2s10.dtos.UsuarioRespostaDto;
-import br.futurodev.jmt.m2s10.entidades.UsuarioEntity;
-import br.futurodev.jmt.m2s10.mapeadores.UsuarioMapper;
-import br.futurodev.jmt.m2s10.repositorios.UsuarioRepository;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRequisicaoDto;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRespostaDto;
+import br.futurodev.jmt.m2s11.entidades.UsuarioEntity;
+import br.futurodev.jmt.m2s11.mapeadores.UsuarioMapper;
+import br.futurodev.jmt.m2s11.repositorios.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

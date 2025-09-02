@@ -1,8 +1,8 @@
-package br.futurodev.jmt.m2s10.mapeadores;
+package br.futurodev.jmt.m2s11.mapeadores;
 
-import br.futurodev.jmt.m2s10.dtos.UsuarioRequisicaoDto;
-import br.futurodev.jmt.m2s10.dtos.UsuarioRespostaDto;
-import br.futurodev.jmt.m2s10.entidades.UsuarioEntity;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRequisicaoDto;
+import br.futurodev.jmt.m2s11.dtos.UsuarioRespostaDto;
+import br.futurodev.jmt.m2s11.entidades.UsuarioEntity;
 
 public class UsuarioMapper {
 

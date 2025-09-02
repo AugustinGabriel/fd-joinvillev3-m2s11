@@ -1,6 +1,6 @@
-package br.futurodev.jmt.m2s10.repositorios;
+package br.futurodev.jmt.m2s11.repositorios;
 
-import br.futurodev.jmt.m2s10.entidades.UsuarioEntity;
+import br.futurodev.jmt.m2s11.entidades.UsuarioEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
