@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -X -DskipTests
 
-FROM openjdk:17-ea-10-jdk-slim
+FROM amazoncorretto:17-alpine-jdk
 WORKDIR /app
 COPY --from=build ./app/target/*.jar app.jar
 
