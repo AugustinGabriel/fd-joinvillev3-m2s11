@@ -2,7 +2,10 @@ package br.futurodev.jmt.m2s11.entidades;
 
 import br.futurodev.jmt.m2s11.enums.Perfil;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -11,6 +14,9 @@ import java.util.List;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "usuarios")
 public class UsuarioEntity implements UserDetails {
 
